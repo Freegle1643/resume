@@ -1,0 +1,26 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "A resume generator based on pug.",
+  "main": "renderResume.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonApeman/resume.git"
+  },
+  "keywords": [
+    "resume",
+    "generator"
+  ],
+  "author": "jasonapeman@outlook.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JasonApeman/resume/issues"
+  },
+  "homepage": "https://github.com/JasonApeman/resume#readme",
+  "dependencies": {
+    "pug": "^2.0.0-beta6"
+  }
+}

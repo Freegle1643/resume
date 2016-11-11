@@ -1,0 +1,12 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+public/script
+
+node_modules/
+bower_components/
+
+#vscode
+.vscode
