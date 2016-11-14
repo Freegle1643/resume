@@ -3,12 +3,16 @@
 	box-sizing: border-box;
 }
 
+body{
+	background-color: #fff;
+}
+
 *:not(.fa){
 	font-family: Baskerville, "Times New Roman", serif;
 }
 
 .header{
-	width: 100%;
+	min-width: 1000px;
 	height: auto;
 	background-color: #333;
 	padding-top: 100px;
@@ -44,6 +48,45 @@
 	color: #ddd;
 	font-size: 24px;
 }
-</style></head><body><div class="header"><h1><span>Jason Yang</span></h1><h2><i class="fa fa-envelope"></i><span>jasonapeman@outlook.com</span></h2><h3><i class="fa fa-map-marker"></i><span>Nanjing City, Jiangsu Province, China</span></h3></div><div class="main"></div><div class="footer"></div></body><script src="https://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script><script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><script>
+
+.main{
+	width: 1000px;
+	height: auto;
+	margin: auto;
+	padding: 50px;
+}
+
+.main>h2{
+	width: 100%;
+	padding-left: 60px;
+	color: #000;
+	font-size: 28px;
+	line-height: 50px;
+	display: block;
+	position: relative;
+	font-style: italic;
+}
+
+.main>h2>i{
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: -25px;
+	border-radius: 50%;
+	line-height: 50px;
+	text-align: center;
+	font-size: 20px;
+	background-color: #333;
+	color: #fff;
+}
+
+.contentContainer{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-left: 1px dashed #333;
+}
+</style></head><body><div class="header"><h1>Jason Yang</h1><h2>jasonapeman@outlook.com</h2><h3>Nanjing City, Jiangsu Province, China</h3></div><div class="main"><h2><i class="fa fa-university"></i><span>Eduction Experience</span></h2><div class="contentContainer"></div><h2><i class="fa fa-cogs"></i><span>Personal Skills</span></h2><div class="contentContainer"></div><h2><i class="fa fa-trophy"></i><span>Projects Experience</span></h2><div class="contentContainer"></div></div><div class="footer"></div></body><script src="https://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script><script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><script>
 console.log("RESUME")
 </script></html>
