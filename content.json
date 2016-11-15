@@ -4,17 +4,30 @@
 	"address":"Nanjing City, Jiangsu Province, China",
 	"education":[
 		{
-
+			"institution":"Southeast University",
+			"degree":"Bachelor",
+			"from":"August of 2013",
+			"until":"June of 2017"
 		}
 	],
 	"skill":[
-		{
-			
-		}
+		{"description":"WEB front-end basic skills about HTML CSS and javascript and a set of related languages like pug sass and coffeescript."},
+		{"description":"WEB front-end application development with javascript front-end platforms such as reactjs."},
+		{"description":"Usage of new-generation ECMAScript with babeljs."},
+		{"description":"RESTful server building with expressjs on nodejs."}
 	],
 	"project":[
 		{
-
+			"name":"Babel Arena",
+			"position":"Main Developer",
+			"time":"October of 2016 till now",
+			"description":"An on-line editor for babel.js with a series of tutorials."
+		},
+		{
+			"name":"Marksman",
+			"position":"Main Developer",
+			"time":"December of 2015 to December of 2016",
+			"description":"A WEB markdown collaboration application."
 		}
 	]
 }

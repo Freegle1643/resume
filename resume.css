@@ -86,4 +86,121 @@ body{
 	padding-top: 20px;
 	padding-bottom: 20px;
 	border-left: 1px dashed #333;
+	padding-left: 60px;
+}
+
+.education,
+.skill,
+.project{
+	margin-bottom: 30px;
+	
+	position: relative;
+}
+.education::before,
+.skill::before,
+.project::before{
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: -70px;
+	border-radius: 50%;
+	line-height: 20px;
+	text-align: center;
+	font-size: 12px;
+	background-color: #333;
+	color: #fff;
+}
+
+.education{
+	counter-increment: education;
+}
+.education::before{
+	content: counter(education);
+}
+
+.education>h3{
+	display: block;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.education>h3>span{
+	margin-right: 10px;
+}
+
+.education>h3>span.institution{
+	font-size: 24px;
+	color: #000;
+}
+.education>h3>span.degree{
+	font-size: 22px;
+	color: #666;
+}
+
+.education>p{
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+	font-size: 18px;
+	color: #000;
+}
+
+.education>p>span{
+	margin-right: 5px;
+}
+
+.skill{
+	counter-increment: skill;
+}
+.skill::before{
+	content: counter(skill);
+}
+
+.skill>p{
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	color: #000;
+}
+
+.project{
+	counter-increment: project;
+}
+.project::before{
+	content: counter(project);
+}
+
+.project>h3{
+	display: block;
+	width: 100%;
+	margin-bottom: 15px;
+	font-size: 24px;
+	color: #000;
+}
+
+.project>h3>span{
+	margin-right: 10px;
+}
+
+.project>p{
+	display: block;
+	width: 100%;
+}
+
+.project>p.position,
+.project>p.time{
+	font-size: 20px;
+	color: #666;
+	margin-bottom: 15px;
+}
+
+.project>p>span{
+	margin-right: 10px;
+}
+
+.project>p.description{
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 10px;
 }

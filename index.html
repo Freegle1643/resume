@@ -86,7 +86,123 @@ body{
 	padding-top: 20px;
 	padding-bottom: 20px;
 	border-left: 1px dashed #333;
+	padding-left: 60px;
 }
-</style></head><body><div class="header"><h1>Jason Yang</h1><h2>jasonapeman@outlook.com</h2><h3>Nanjing City, Jiangsu Province, China</h3></div><div class="main"><h2><i class="fa fa-university"></i><span>Eduction Experience</span></h2><div class="contentContainer"></div><h2><i class="fa fa-cogs"></i><span>Personal Skills</span></h2><div class="contentContainer"></div><h2><i class="fa fa-trophy"></i><span>Projects Experience</span></h2><div class="contentContainer"></div></div><div class="footer"></div></body><script src="https://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script><script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><script>
+
+.education,
+.skill,
+.project{
+	margin-bottom: 30px;
+	
+	position: relative;
+}
+.education::before,
+.skill::before,
+.project::before{
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: -70px;
+	border-radius: 50%;
+	line-height: 20px;
+	text-align: center;
+	font-size: 12px;
+	background-color: #333;
+	color: #fff;
+}
+
+.education{
+	counter-increment: education;
+}
+.education::before{
+	content: counter(education);
+}
+
+.education>h3{
+	display: block;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.education>h3>span{
+	margin-right: 10px;
+}
+
+.education>h3>span.institution{
+	font-size: 24px;
+	color: #000;
+}
+.education>h3>span.degree{
+	font-size: 22px;
+	color: #666;
+}
+
+.education>p{
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+	font-size: 18px;
+	color: #000;
+}
+
+.education>p>span{
+	margin-right: 5px;
+}
+
+.skill{
+	counter-increment: skill;
+}
+.skill::before{
+	content: counter(skill);
+}
+
+.skill>p{
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	color: #000;
+}
+
+.project{
+	counter-increment: project;
+}
+.project::before{
+	content: counter(project);
+}
+
+.project>h3{
+	display: block;
+	width: 100%;
+	margin-bottom: 15px;
+	font-size: 24px;
+	color: #000;
+}
+
+.project>h3>span{
+	margin-right: 10px;
+}
+
+.project>p{
+	display: block;
+	width: 100%;
+}
+
+.project>p.position,
+.project>p.time{
+	font-size: 20px;
+	color: #666;
+	margin-bottom: 15px;
+}
+
+.project>p>span{
+	margin-right: 10px;
+}
+
+.project>p.description{
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 10px;
+}</style></head><body><div class="header"><h1>Jason Yang</h1><h2>jasonapeman@outlook.com</h2><h3>Nanjing City, Jiangsu Province, China</h3></div><div class="main"><h2><i class="fa fa-university"></i><span>Education Experience</span></h2><div class="contentContainer"><div class="education"><h3><span class="institution">Southeast University</span><span class="degree">Bachelor</span></h3><p><span>From:</span><span>August of 2013</span></p><p><span>Until:</span><span>June of 2017</span></p></div></div><h2><i class="fa fa-cogs"></i><span>Personal Skills</span></h2><div class="contentContainer"><div class="skill"><p>WEB front-end basic skills about HTML CSS and javascript and a set of related languages like pug sass and coffeescript.</p></div><div class="skill"><p>WEB front-end application development with javascript front-end platforms such as reactjs.</p></div><div class="skill"><p>Usage of new-generation ECMAScript with babeljs.</p></div><div class="skill"><p>RESTful server building with expressjs on nodejs.</p></div></div><h2><i class="fa fa-trophy"></i><span>Projects Experience</span></h2><div class="contentContainer"><div class="project"><h3><span>Project Name:</span><span>Babel Arena</span></h3><p class="position"><span>Position in Project:</span><span>Main Developer</span></p><p class="time">October of 2016 till now</p><p class="description">An on-line editor for babel.js with a series of tutorials.</p></div><div class="project"><h3><span>Project Name:</span><span>Marksman</span></h3><p class="position"><span>Position in Project:</span><span>Main Developer</span></p><p class="time">December of 2015 to December of 2016</p><p class="description">A WEB markdown collaboration application.</p></div></div></div><div class="footer"></div></body><script src="https://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script><script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><script>
 console.log("RESUME")
 </script></html>

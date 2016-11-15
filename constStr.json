@@ -1,5 +1,9 @@
 {
-	"education":"Eduction Experience",
+	"education":"Education Experience",
 	"skill":"Personal Skills",
-	"project":"Projects Experience"
+	"project":"Projects Experience",
+	"educationFrom":"From:",
+	"educationUntil":"Until:",
+	"projectName":"Project Name:",
+	"projectPosition":"Position in Project:"
 }
