@@ -1,11 +1,11 @@
 {
-	"education":"Education Experience",
-	"skill":"Personal Skills",
-	"project":"Projects Experience",
-	"educationFrom":"From:",
-	"educationUntil":"Until:",
-	"projectName":"Project Name:",
-	"projectPosition":"Position in Project:",
-	"thisRepo":"The repository of this project in github:",
+	"education":"教育经历",
+	"skill":"个人技能",
+	"project":"项目经验",
+	"educationFrom":"自：",
+	"educationUntil":"到：",
+	"projectName":"项目名称：",
+	"projectPosition":"主要职责：",
+	"thisRepo":"本项目的GitHub Repository：",
 	"repoAddress":"https://github.com/JasonApeman/resume"
 }

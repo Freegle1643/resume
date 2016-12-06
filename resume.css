@@ -8,7 +8,7 @@ body{
 }
 
 *:not(.fa){
-	font-family: Baskerville, "Times New Roman", serif;
+	font-family: "Helvetica Neue","Helvetica","Lucida Grande","Arial","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei","sans-serif";
 }
 
 .header{
@@ -202,6 +202,7 @@ body{
 .project>p.description{
 	font-size: 18px;
 	color: #000;
+	line-height: 30px;
 	margin-bottom: 10px;
 }
 
