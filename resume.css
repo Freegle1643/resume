@@ -204,3 +204,30 @@ body{
 	color: #000;
 	margin-bottom: 10px;
 }
+
+.footer{
+	width: 1000px;
+	height: auto;
+	margin: auto;
+	margin-top: 50px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-top: 1px dashed #000;
+}
+
+.footer>p{
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	color: #000;
+	margin-bottom: 10px;
+}
+
+.footer>p>a{
+	color: #000;
+	opacity: 0.75;
+}
+
+.footer>p>a:hover{
+	opacity: 0.9;
+}
