@@ -4,43 +4,57 @@ let pug=require("pug");
 
 let fs=require("fs");
 
-let content=require("./content.json");
-let constStr=require("./constStr.json");
-
-
+//options related to render
 const RENDER_OPTION={
 	pretty: false,
 };
 
-let rendered=pug.renderFile("./resume.pug", (function(){
-	let options={};
+let render=function(content,constStr,target){
 
-	options.content={};
-	for(let key in content){
-		options.content[key]=content[key];
-	}
+	let rendered=pug.renderFile("./resume.pug", (function(){
+		let options={};
 
-	options.constStr={};
-	for(let key in constStr){
-		options.constStr[key]=constStr[key];
-	}
+		options.content={};
+		for(let key in content){
+			options.content[key]=content[key];
+		}
 
-	for(let key in RENDER_OPTION){
-		options[key]=RENDER_OPTION[key];
-	}
+		options.constStr={};
+		for(let key in constStr){
+			options.constStr[key]=constStr[key];
+		}
 
-	//return the option object for pug
-	console.log(options);
-	return options;
-})());
+		for(let key in RENDER_OPTION){
+			options[key]=RENDER_OPTION[key];
+		}
 
-//console.log(rendered);
+		//return the option object for pug
+		console.log(options);
+		return options;
+	})());
 
-fs.writeFile("./index.html",rendered,"utf8",function(err){
-	//err
-	if(err){
-		return console.log(err);
-	}
+	
+	fs.writeFile(target,rendered,"utf8",function(err){
+		//err
+		if(err){
+			return console.log(err);
+		}
 
-	console.log("complete render.");
-});
+		//console.log("Complete.")
+	});
+
+}
+
+//render english ver
+render(
+	require("./content.json"),
+	require("./constStr.json"),
+	"./index.html"
+);
+
+//render chinese ver
+render(
+	require("./content_cn.json"),
+	require("./constStr_cn.json"),
+	"./cn.html"
+);

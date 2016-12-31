@@ -1,0 +1,45 @@
+{
+	"name":"杨佳星",
+	"contact":"jasonapeman@outlook.com",
+	"address":"中国 江苏省 南京市",
+	"education":[
+		{
+			"institution":"东南大学",
+			"degree":"本科",
+			"from":"2013年八月",
+			"until":"2017年六月"
+		}
+	],
+	"skill":[
+		{"description":"具备 HTML、CSS、JavaScript 语言相关的 WEB 前端基本技能，能使用其他相关语言如 Pug、Sass 和 CoffeScript。"},
+		{"description":"能使用 React.js 相关的 JavaScript 框架进行简单的 WEB 前端应用程序开发。"},
+		{"description":"具备借助 Babel.js 在项目中使用新一代 ECMAScript 特性的能力。"},
+		{"description":"能利用 Node.js 的 Express.js 框架进行简单的 RESTful API 服务端开发。"}
+	],
+	"project":[
+		{
+			"name":"东南大学2014年校史知识竞赛初赛系统开发比赛二等奖",
+			"position":"队长",
+			"time":"2014年六月至九月",
+			"description":"在东南大学软件学院举办的“2014年校史知识竞赛初赛系统开发比赛”中开发的WEB答题系统获二等奖（第二名）。"
+		},
+		{
+			"name":"东南大学软件学院2014年软件建模大赛一等奖",
+			"position":"WEB前端负责人",
+			"time":"2014年十一月",
+			"description":"在“东南大学软件学院2014年软件建模大赛”中负责队伍的WEB前端开发，队伍所开发的“仿朋友圈”系统在竞赛中获一等奖。"
+		},
+		{
+			"name":"东南大学2015年与2016年最具影响力毕业生线上初选投票系统",
+			"position":"WEB前端负责人",
+			"time":"2015年五月和2016年五月",
+			"description":"连续两年负责了“东南大学最具影响力毕业生线上初选投票系统”的WEB前端开发，两年的投票活动均顺利完成。"
+		},
+		{
+			"name":"Markdown 线上协同写作系统国创项目",
+			"position":"组长兼WEB前端负责人",
+			"time":"2014年至2016年",
+			"description":"本项目是使用 Markdown 的线上实时协同写作项目，能实现多个用户对同一个 Markdown 文档的实时协作，并支持实时预览渲染后的文档。本项目被认定为学生国创项目。在本项目中主要负责了WEB前端的开发实现。"
+		}
+	]
+}

@@ -18,20 +18,26 @@
 	],
 	"project":[
 		{
+			"name":"Paintbrush",
+			"position":"Team leader and main developer",
+			"time":"October of 2015 till now",
+			"description":"A data structure visualization project."
+		},
+		{
 			"name":"Babel Arena",
-			"position":"Main Developer",
+			"position":"Main developer of personal project",
 			"time":"October of 2016 till now",
 			"description":"An on-line editor for babel.js with a series of tutorials."
 		},
 		{
 			"name":"Marksman",
-			"position":"Main Developer",
-			"time":"December of 2015 to December of 2016",
+			"position":"Main developer",
+			"time":"October of 2014 to May of 2016",
 			"description":"A WEB markdown collaboration application, which obtained the title of National University Student Innovation Project."
 		},
 		{
 			"name":"Development of SEU Most Influential Graduates Online Vote System of 2015 and 2016",
-			"position":"Main FE Developer",
+			"position":"Main front-end developer",
 			"time":"May of 2015 and May of 2016",
 			"description":"I was one of the members of the development team of SEU most influential annual online vote, which has been held for several years. I developed the front-end of the WEB vote application of this activity of 2015 and 2016 and succeeded."
 		}

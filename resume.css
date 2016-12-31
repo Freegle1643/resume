@@ -30,10 +30,6 @@ body{
 	padding-bottom: 100px;
 }
 
-.header i.fa{
-	margin-right: 20px;
-}
-
 .header>h1,
 .header>h2,
 .header>h3{
@@ -65,7 +61,6 @@ body{
 	}
 
 	.header>h3{
-		color: #ddd;
 		font-size: 24px;
 	}
 }
@@ -78,6 +73,18 @@ body{
 
 .header>h3{
 	color: #ddd;
+}
+
+@media print {
+	.header{
+		background-color: #fff;
+	}
+
+	.header>h1,
+	.header>h2,
+	.header>h3{
+		color: #333;
+	}
 }
 
 @media screen and (max-width: 1000px){
@@ -177,7 +184,7 @@ body{
 }
 .education>h3>span.degree{
 	font-size: 22px;
-	color: #666;
+	color: #333;
 }
 
 .education>p{
@@ -204,6 +211,7 @@ body{
 	width: 100%;
 	font-size: 18px;
 	color: #000;
+	line-height: 30px;
 }
 
 .project{
@@ -245,6 +253,7 @@ body{
 	font-size: 18px;
 	color: #000;
 	margin-bottom: 10px;
+	line-height: 30px;
 }
 
 @media screen and (max-width: 1000px){
@@ -283,4 +292,10 @@ body{
 
 .footer>p>a:hover{
 	opacity: 0.9;
+}
+
+@media print {
+	.footer{
+		display: none;
+	}
 }
