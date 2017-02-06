@@ -8,5 +8,5 @@ public/script
 node_modules/
 bower_components/
 
-#vscode
-.vscode
+#render
+render

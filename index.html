@@ -1,304 +1,38 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jason Yang</title><link href="https://cdn.bootcss.com/meyer-reset/2.0/reset.min.css" rel="stylesheet"><link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><style>
-*{
-	box-sizing: border-box;
-}
-
-body{
-	background-color: #fff;
-}
-
-*:not(.fa){
-	font-family: Baskerville, "Times New Roman", serif;
-}
-
-@media screen and (max-width: 1000px){
-	.header{
-		width: auto;
-	}
-}
-
-@media screen and (min-width: 1000px){
-	.header{
-		min-width: 1000px;
-	}
-}
-
-.header{
-	height: auto;
-	background-color: #333;
-	padding-top: 100px;
-	padding-bottom: 100px;
-}
-
-.header>h1,
-.header>h2,
-.header>h3{
-	display: block;
-	width: 100%;
-	text-align: center;
-}
-
-.header>h1{
-	color: #fff;
-	font-size: 36px;
-	font-style: italic;
-	margin-bottom: 30px;
-}
-
-@media screen and (max-width: 1000px){
-	.header>h2{
-		font-size: 22px;
-	}
-
-	.header>h3{
-		font-size: 18px;
-	}
-}
-
-@media screen and (min-width: 1000px){
-	.header>h2{
-		font-size: 28px;
-	}
-
-	.header>h3{
-		font-size: 24px;
-	}
-}
-
-
-.header>h2{
-	color: #ddd;
-	margin-bottom: 10px;
-}
-
-.header>h3{
-	color: #ddd;
-}
-
-@media print {
-	.header{
-		background-color: #fff;
-	}
-
-	.header>h1,
-	.header>h2,
-	.header>h3{
-		color: #333;
-	}
-}
-
-@media screen and (max-width: 1000px){
-	.main{
-		width: auto;
-	}
-}
-
-@media screen and (min-width: 1000px){
-	.main{
-		width: 1000px;
-	}
-}
-
-.main{
-	height: auto;
-	margin: auto;
-	padding: 50px;
-}
-
-.main>h2{
-	width: 100%;
-	padding-left: 60px;
-	color: #000;
-	font-size: 28px;
-	line-height: 50px;
-	display: block;
-	position: relative;
-	font-style: italic;
-}
-
-.main>h2>i{
-	display: block;
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	left: -25px;
-	border-radius: 50%;
-	line-height: 50px;
-	text-align: center;
-	font-size: 20px;
-	background-color: #333;
-	color: #fff;
-}
-
-.contentContainer{
-	width: 100%;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	border-left: 1px dashed #333;
-	padding-left: 60px;
-}
-
-.education,
-.skill,
-.project{
-	margin-bottom: 30px;
-	
-	position: relative;
-}
-.education::before,
-.skill::before,
-.project::before{
-	display: block;
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	left: -70px;
-	border-radius: 50%;
-	line-height: 20px;
-	text-align: center;
-	font-size: 12px;
-	background-color: #333;
-	color: #fff;
-}
-
-.education{
-	counter-increment: education;
-}
-.education::before{
-	content: counter(education);
-}
-
-.education>h3{
-	display: block;
-	width: 100%;
-	margin-bottom: 15px;
-}
-
-.education>h3>span{
-	margin-right: 10px;
-}
-
-.education>h3>span.institution{
-	font-size: 24px;
-	color: #000;
-}
-.education>h3>span.degree{
-	font-size: 22px;
-	color: #333;
-}
-
-.education>p{
-	display: block;
-	width: 100%;
-	margin-bottom: 10px;
-	font-size: 18px;
-	color: #000;
-}
-
-.education>p>span{
-	margin-right: 5px;
-}
-
-.skill{
-	counter-increment: skill;
-}
-.skill::before{
-	content: counter(skill);
-}
-
-.skill>p{
-	display: block;
-	width: 100%;
-	font-size: 18px;
-	color: #000;
-	line-height: 30px;
-}
-
-.project{
-	counter-increment: project;
-}
-.project::before{
-	content: counter(project);
-}
-
-.project>h3{
-	display: block;
-	width: 100%;
-	margin-bottom: 15px;
-	font-size: 24px;
-	color: #000;
-}
-
-.project>h3>span{
-	margin-right: 10px;
-}
-
-.project>p{
-	display: block;
-	width: 100%;
-}
-
-.project>p.position,
-.project>p.time{
-	font-size: 20px;
-	color: #666;
-	margin-bottom: 15px;
-}
-
-.project>p>span{
-	margin-right: 10px;
-}
-
-.project>p.description{
-	font-size: 18px;
-	color: #000;
-	margin-bottom: 10px;
-	line-height: 30px;
-}
-
-@media screen and (max-width: 1000px){
-	.footer{
-		display: none;
-	}
-}
-
-@media screen and (min-width: 1000px){
-	.footer{
-		width: 1000px;
-	}
-}
-
-
-.footer{
-	margin: auto;
-	margin-top: 50px;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	border-top: 1px dashed #000;
-}
-
-.footer>p{
-	display: block;
-	text-align: center;
-	font-size: 18px;
-	color: #000;
-	margin-bottom: 10px;
-}
-
-.footer>p>a{
-	color: #000;
-	opacity: 0.75;
-}
-
-.footer>p>a:hover{
-	opacity: 0.9;
-}
-
-@media print {
-	.footer{
-		display: none;
-	}
-}
-</style></head><body><div class="header"><h1>Jason Yang</h1><h2>jasonapeman@outlook.com</h2><h3>Nanjing City, Jiangsu Province, China</h3></div><div class="main"><h2><i class="fa fa-university"></i><span>Education Experience</span></h2><div class="contentContainer"><div class="education"><h3><span class="institution">Southeast University</span><span class="degree">Bachelor</span></h3><p><span>From:</span><span>August of 2013</span></p><p><span>Until:</span><span>June of 2017</span></p></div></div><h2><i class="fa fa-cogs"></i><span>Personal Skills</span></h2><div class="contentContainer"><div class="skill"><p>WEB front-end basic skills about HTML CSS and javascript and a set of related languages like pug sass and coffeescript.</p></div><div class="skill"><p>WEB front-end application development with javascript front-end platforms such as reactjs.</p></div><div class="skill"><p>Usage of new-generation ECMAScript with babeljs.</p></div><div class="skill"><p>RESTful server building with expressjs on nodejs.</p></div></div><h2><i class="fa fa-trophy"></i><span>Projects Experience</span></h2><div class="contentContainer"><div class="project"><h3><span>Project Name:</span><span>Paintbrush</span></h3><p class="position"><span>Position in Project:</span><span>Team leader and main developer</span></p><p class="time">October of 2015 till now</p><p class="description">A data structure visualization project.</p></div><div class="project"><h3><span>Project Name:</span><span>Babel Arena</span></h3><p class="position"><span>Position in Project:</span><span>Main developer of personal project</span></p><p class="time">October of 2016 till now</p><p class="description">An on-line editor for babel.js with a series of tutorials.</p></div><div class="project"><h3><span>Project Name:</span><span>Marksman</span></h3><p class="position"><span>Position in Project:</span><span>Main developer</span></p><p class="time">October of 2014 to May of 2016</p><p class="description">A WEB markdown collaboration application, which obtained the title of National University Student Innovation Project.</p></div><div class="project"><h3><span>Project Name:</span><span>Development of SEU Most Influential Graduates Online Vote System of 2015 and 2016</span></h3><p class="position"><span>Position in Project:</span><span>Main front-end developer</span></p><p class="time">May of 2015 and May of 2016</p><p class="description">I was one of the members of the development team of SEU most influential annual online vote, which has been held for several years. I developed the front-end of the WEB vote application of this activity of 2015 and 2016 and succeeded.</p></div></div></div><div class="footer"><p><span>The repository of this project in github:</span><a href="https://github.com/JasonApeman/resume">https://github.com/JasonApeman/resume</a></p></div></body><script src="https://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script><script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><script>
-console.log("RESUME")
-</script></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>RESUME</title>
+		<link href="loading.css" rel="stylesheet">
+		<link href="https://cdn.bootcss.com/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+		<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="./resume.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="loadingMask" id="loadingMask">
+			<span class="loadingDot loadingDot_0"></span>
+			<span class="loadingDot loadingDot_1"></span>
+			<span class="loadingDot loadingDot_2"></span>
+		</div>
+		<div class="header">
+			<h1 id="name"></h1>
+			<h2 id="contact"></h2>
+			<h3 id="address"></h3>
+		</div>
+		<div class="main">
+			<h2><i class="fa fa-university"></i><span id="educationStr"></span></h2>
+			<div class="contentContainer" id="educationContent"></div>
+			<h2><i class="fa fa-cogs"></i><span id="skillStr"></span></h2>
+			<div class="contentContainer" id="skillContent"></div>
+			<h2><i class="fa fa-trophy"></i><span id="projectStr"></span></h2>
+			<div class="contentContainer" id="projectContent"></div>
+		</div>
+		<div class="footer">
+			<p><span id="thisRepo"></span><a id="repoAddress"></a></p>
+		</div>
+	</body>
+	<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	<script src="./loading.js"></script>
+	<script src="./resume.js"></script>
+	</script>
+</html>

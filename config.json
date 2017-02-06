@@ -1,0 +1,13 @@
+{
+	"lang":{
+		"en":{
+			"constStr":"./constStr_en.json",
+			"content":"./content_en.json"
+		},
+		"cn":{
+			"constStr":"./constStr_cn.json",
+			"content":"./content_cn.json"
+		}
+	},
+	"defaultLang":"en"
+}

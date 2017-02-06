@@ -4,9 +4,10 @@ let pug=require("pug");
 
 let fs=require("fs");
 
+const RENDERDIR="./render/"
+
 //options related to render
 const RENDER_OPTION={
-	pretty: false,
 };
 
 let render=function(content,constStr,target){
@@ -29,32 +30,44 @@ let render=function(content,constStr,target){
 		}
 
 		//return the option object for pug
-		console.log(options);
+		//console.log(options);
 		return options;
 	})());
 
-	
-	fs.writeFile(target,rendered,"utf8",function(err){
+	//remove newlines and tabs
+	var minStr=rendered
+		.replace(/(\r\n|\n|\r)/gm,"")
+		.replace(/\t/g,"")
+
+	fs.mkdir(RENDERDIR,function(err){
 		//err
 		if(err){
-			return console.log(err);
+
+		}else{
+
 		}
 
-		//console.log("Complete.")
-	});
+		fs.writeFile(target,minStr,"utf8",function(err){
+			//err
+			if(err){
+				return console.log(err);
+			}
 
+			console.log("Resume HTML file rendered to:",target)
+		});
+	});
 }
 
-//render english ver
-render(
-	require("./content.json"),
-	require("./constStr.json"),
-	"./index.html"
-);
+let config=require("./config.json");
 
-//render chinese ver
-render(
-	require("./content_cn.json"),
-	require("./constStr_cn.json"),
-	"./cn.html"
-);
+//render
+for(let name in config.lang){
+
+	var lang=config.lang[name];
+
+	render(
+		require(lang.content),
+		require(lang.constStr),
+		RENDERDIR+name+".html"
+	)
+}
