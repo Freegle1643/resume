@@ -166,9 +166,10 @@ $.get("./config.json",function(config){
 			],
 			function(retData){
 
-				render(retData.content,retData.constStr);
-
-				loading.done();
+				render(retData.content,retData.constStr,function(){
+					loading.done();
+				});
+				
 			}
 		)
 	})
@@ -192,9 +193,9 @@ $.get("./config.json",function(config){
 			],
 			function(retData){
 
-				render(retData.content,retData.constStr);
-
-				loading.done();
+				render(retData.content,retData.constStr,function(){
+					loading.done();
+				});
 
 			}
 		)
