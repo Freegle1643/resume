@@ -1,0 +1,53 @@
+mixin education(institution,degree,from,until)
+	div.education
+		h3
+			span.institution=institution
+			span.degree=degree
+		p
+			span=constStr.educationFrom
+			span=from
+		p
+			span=constStr.educationUntil
+			span=until
+
+mixin skill(description)
+	div.skill
+		p=description
+
+mixin project(name,position,time,description)
+	div.project
+		h3
+			span=name
+		p.position
+			span=constStr.projectPosition
+			span=position
+		p.time=time
+		p.description=description
+
+div.header
+	h1=content.name
+	h2=content.contact
+	h3=content.address
+div.main
+	h2
+		i.fa.fa-university
+		span=constStr.education
+	div.contentContainer
+		each item in content.education
+			+education(item.institution,item.degree,item.from,item.until)
+	h2
+		i.fa.fa-cogs
+		span=constStr.skill
+	div.contentContainer
+		each item in content.skill
+			+skill(item.description)
+	h2
+		i.fa.fa-trophy
+		span=constStr.project
+	div.contentContainer
+		each item in content.project
+			+project(item.name,item.position,item.time,item.description)
+div.footer
+	p
+		span=constStr.thisRepo
+		a(href=constStr.repoAddress)=constStr.repoAddress

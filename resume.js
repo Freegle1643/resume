@@ -138,83 +138,6 @@ var multipleAjaxLoader=(function(){
 	}
 })()
 
-//renderPage
-var renderPage=function(content,constStr){
-
-	//header
-	$("#name").html(content.name);
-	$("#contact").html(content.contact);
-	$("#address").html(content.address);
-
-	//footer
-	$("#thisRepo").html(constStr.thisRepo);
-	$("#repoAddress").attr({"href":constStr.repoAddress}).html(constStr.repoAddress);
-
-	//education
-	$("#educationStr").html(constStr.education);
-	$("#educationContent").empty();
-	for(var i=0;i<content.education.length;i++){
-		$("#educationContent")
-		.append(
-			$("<div>").addClass("education")
-			.append(
-				$("<h3>")
-				.append($("<span>").addClass("institution").html(content.education[i].institution))
-				.append($("<span>").addClass("degree").html(content.education[i].degree))
-			)
-			.append(
-				$("<p>")
-				.append($("<span>").html(constStr.educationFrom))
-				.append($("<span>").html(content.education[i].from))
-			)
-			.append(
-				$("<p>")
-				.append($("<span>").html(constStr.educationUntil))
-				.append($("<span>").html(content.education[i].until))
-			)
-		)
-	}
-
-	//skill
-	$("#skillStr").html(constStr.skill);
-	$("#skillContent").empty();
-	for(var i=0;i<content.skill.length;i++){
-		$("#skillContent")
-		.append(
-			$("<div>").addClass("skill")
-			.append(
-				$("<p>").html(content.skill[i].description)
-			)
-		)
-	}
-
-	//project
-	$("#projectStr").html(constStr.project);
-	$("#projectContent").empty();
-	for(var i=0;i<content.project.length;i++){
-		$("#projectContent")
-		.append(
-			$("<div>").addClass("project")
-			.append(
-				$("<h3>")
-				.append($("<span>").html(constStr.projectName))
-				.append($("<span>").html(content.project[i].name))
-			)
-			.append(
-				$("<p>").addClass("position")
-				.append($("<span>").html(constStr.projectPosition))
-				.append($("<span>").html(content.project[i].position))
-			)
-			.append(
-				$("<p>").addClass("time").html(content.project[i].time)
-			)
-			.append(
-				$("<p>").addClass("description").html(content.project[i].description)
-			)
-		)
-	}
-}
-
 //read config
 $.get("./config.json",function(config){
 	//console.log(config)
@@ -243,7 +166,7 @@ $.get("./config.json",function(config){
 			],
 			function(retData){
 
-				renderPage(retData.content,retData.constStr);
+				render(retData.content,retData.constStr);
 
 				loading.done();
 			}
@@ -269,7 +192,7 @@ $.get("./config.json",function(config){
 			],
 			function(retData){
 
-				renderPage(retData.content,retData.constStr);
+				render(retData.content,retData.constStr);
 
 				loading.done();
 

@@ -16,7 +16,7 @@ You can clone this repo and change these json files as you like, then run the fo
 
     npm install
 
-    node renderResume.js
+    node node_render.js
 
 Then html resume files will be done in the "render" directory, which are also can be printed into pdf files by your browser.
 

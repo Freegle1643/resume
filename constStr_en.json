@@ -4,7 +4,6 @@
 	"project":"Projects Experience",
 	"educationFrom":"From:",
 	"educationUntil":"Until:",
-	"projectName":"Project Name:",
 	"projectPosition":"Position in Project:",
 	"thisRepo":"The repository of this project in github:",
 	"repoAddress":"https://github.com/JasonApeman/resume"
